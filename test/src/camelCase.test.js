@@ -26,10 +26,6 @@ describe('camelCase.js', () => {
             expect(camelCase("\'3\', \'4\'")).to.eql(" 34");
         });
 
-        it('should return \'\' \'\'', () => {
-            expect(camelCase("")).to.eql(" ");
-        });
-
         it('should return 123', () => {
             expect(camelCase("123")).to.eql(" 123");
         });
