@@ -1,23 +1,21 @@
-const chai = require('chai');
-const add = require("../src/add");
-const createMathOperation = require("../src/.internal/createMathOperation");
-
-const addTest = createMathOperation(1,2);
+import chai from 'chai';
+const expect = chai.expect;
+import add from "../src/add.js";
 
 describe('add.js', () => {
 
     describe('createMathOperation()', () => {
 
         it('should return defaultValue', () => {
-            expect(createMathOperation(1,2)).to.be.contain(2);
+            expect(add("","2")).to.be.contain(2);
         });
 
         it('should return operator', () => {
-            expect(createMathOperation(1,2)).to.be.contain(1);
+            expect(add("1","")).to.be.contain(1);
         });
 
         it('should return total', () => {
-            expect(createMathOperation(1,2)).to.be.contain(3);
+            expect(add("1","2")).to.be.contain(12);
         });
     });
 
