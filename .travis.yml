@@ -1,12 +1,6 @@
 language: node_js
 node_js:
-  - "14"
- env:
-   global:
-     - COVERALLS_PARALLEL=false
- jobs:
-   include:
-     - script: test
-notifications:
-  webhooks: https://coveralls.io/webhook
-coveralls: true
+  - 14
+script:
+  -  npm test
+  -  npm run coverage
