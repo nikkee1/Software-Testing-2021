@@ -15,5 +15,9 @@ describe('every.js', () => {
             expect(every([1, 2, 3, 4], Boolean)).to.be.eql(true);
         });
 
+        it('should return with true', () => {
+            expect(every([], Boolean)).to.be.eql(true);
+        });
+
     });
 });

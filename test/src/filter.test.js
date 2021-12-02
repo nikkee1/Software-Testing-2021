@@ -31,5 +31,10 @@ describe('filter.js', () => {
             expect(filter(users, ({ active }) => active)).to.be.eql([[]]);
         });
 
+        it('should return with [[]]', () => {
+            const users = [];
+            expect(filter(users, ({ active }) => active)).to.be.eql([[]]);
+        });
+
     });
 });
