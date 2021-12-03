@@ -50,17 +50,13 @@ describe('chunk.js', () => {
 
     describe('testing with right params', () => {
 
-        it('should return right result', () => {
+        it('should return [[\'a\', \'b\'], [\'c\', \'d\']]', () => {
             console.log(chunk(['a', 'b', 'c', 'd'], 2));
-            expect(chunk(['a', 'b', 'c', 'd'], 2)[0]).to.eql([ 'c', 'd' ]);
+            expect(chunk(['a', 'b', 'c', 'd'], 2)[0]).to.eql([['a', 'b'], ['c', 'd']]);
         });
 
-        it('should return right result', () => {
-            expect(chunk(['a', 'b', 'c', 'd'], 3)[0]).to.eql([ 'd', undefined, undefined ]);
-        });
-
-        it('should return right result', () => {
-            expect(chunk(['a', 'b', 'c', 'd', 'e'], 5)[0]).to.eql([ 'a', 'b', 'c', 'd', 'e' ]);
+        it('should return [[\'a\', \'b\', \'c\'], [\'d\']]', () => {
+            expect(chunk(['a', 'b', 'c', 'd'], 3)[0]).to.eql([['a', 'b', 'c'], ['d']]);
         });
 
     });

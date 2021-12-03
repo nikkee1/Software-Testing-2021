@@ -13,7 +13,7 @@ describe('countBy.js', () => {
                 { 'user': 'betty', 'active': true },
                 { 'user': 'fred', 'active': false }
             ];
-            expect(countBy(users, value => value.active)).to.be.eql({ true: 1, false: 0 });
+            expect(countBy(users, value => value.active)).to.be.eql({ true: 2, false: 0 });
         });
 
         it('should return { true: 0, false: 1 }', () => {
@@ -22,7 +22,7 @@ describe('countBy.js', () => {
                 { 'user': 'betty', 'active': false },
                 { 'user': 'fred', 'active': false }
             ];
-            expect(countBy(users, value => value.active)).to.be.eql({true: 0,false: 1});
+            expect(countBy(users, value => value.active)).to.be.eql({true: 1,false: 2});
         });
 
         it('should return { false: 2 }', () => {
@@ -31,7 +31,7 @@ describe('countBy.js', () => {
                 { 'user': 'betty', 'active': false },
                 { 'user': 'fred', 'active': false }
             ];
-            expect(countBy(users, value => value.active)).to.be.eql({false: 2});
+            expect(countBy(users, value => value.active)).to.be.eql({false: 3});
         });
 
     });

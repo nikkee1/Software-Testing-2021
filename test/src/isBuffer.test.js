@@ -18,8 +18,8 @@ describe('isBuffer.js', () => {
 
     describe('Testing with expected/common input', () => {
 
-        it('should return false', () => {
-            expect(isBuffer(new Buffer(2))).to.eql(false);
+        it('should return true', () => {
+            expect(isBuffer(new Buffer(2))).to.eql(true);
         });
 
         it('should return false', () => {

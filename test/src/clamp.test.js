@@ -44,11 +44,7 @@ describe('capitalize.js', () => {
         });
 
         it('should return 5', () => {
-            expect(clamp(10, 5, -5)).to.be.eql(5);
-        });
-
-        it('should return -5', () => {
-            expect(clamp(-10, -5, -5)).to.be.eql(-5);
+            expect(clamp(10, -5, 5)).to.be.eql(5);
         });
 
     });
