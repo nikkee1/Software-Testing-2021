@@ -35,6 +35,7 @@ describe('get.js', () => {
         it('should return empty string', () => {
             expect(get(candy, 'subcategory')).to.eql('');
         });
+
     });
 
 });
