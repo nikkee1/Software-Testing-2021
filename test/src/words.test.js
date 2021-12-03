@@ -23,6 +23,12 @@ describe('words.js', () => {
         it('should return array of strings', () => {
             expect(words('Testing is nice')).to.eql(['Testing', 'is', 'nice']);
         });
+
+        it('should return array of strings taking account given pattern', () => {
+            expect(words('Testing, is, & nice', /[^, ]+/g)).to.eql(['Testing', 'is', '&', 'nice']);
+        });
     });
+
+    
 
 });
