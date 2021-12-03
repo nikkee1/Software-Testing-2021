@@ -1,6 +1,8 @@
 import chai from 'chai';
 const expect = chai.expect;
 import ceil from "../../src/ceil.js";
+import add from "../../src/add.js";
+
 
 describe('ceil.js', () => {
 
@@ -48,6 +50,18 @@ describe('ceil.js', () => {
 
         it('ceil(6040, -2) -> should return 6100', () => {
             expect(ceil(6040, -2)).to.eql(6100);
+        });
+
+    });
+
+    describe('testing together with add.js', () => {
+
+        it('First adding, then rounding', () => {
+            expect(ceil(add(6,8), 2)).to.eql(14.00);
+        });
+
+        it('First ceil, then adding', () => {
+            expect(add(ceil(14, 2), ceil(22,2))).to.eql(36);
         });
 
     });
