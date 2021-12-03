@@ -7,7 +7,7 @@ describe('countBy.js', () => {
 
     describe('testing with right params', () => {
 
-        it('should return { true: 1, false: 0 }', () => {
+        it('should return { true: 2, false: 0 }', () => {
             const users = [
                 { 'user': 'barney', 'active': true },
                 { 'user': 'betty', 'active': true },
@@ -16,7 +16,7 @@ describe('countBy.js', () => {
             expect(countBy(users, value => value.active)).to.be.eql({ true: 2, false: 0 });
         });
 
-        it('should return { true: 0, false: 1 }', () => {
+        it('should return { true: 1, false: 2 }', () => {
             const users = [
                 { 'user': 'barney', 'active': true },
                 { 'user': 'betty', 'active': false },
@@ -25,7 +25,7 @@ describe('countBy.js', () => {
             expect(countBy(users, value => value.active)).to.be.eql({true: 1,false: 2});
         });
 
-        it('should return { false: 2 }', () => {
+        it('should return { false: 3 }', () => {
             const users = [
                 { 'user': 'barney', 'active': false },
                 { 'user': 'betty', 'active': false },
