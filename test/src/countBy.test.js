@@ -7,7 +7,8 @@ describe('countBy.js', () => {
 
     describe('testing with right params', () => {
 
-        it('should return { true: 2, false: 0 }', () => {
+        it('should return { true: 2' +
+            ', false: 0 }', () => {
             const users = [
                 { 'user': 'barney', 'active': true },
                 { 'user': 'betty', 'active': true },
